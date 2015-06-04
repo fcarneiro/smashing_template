@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+	<head>
+		<!--
+			This email template was designed and built by Fabio Carneiro (https://twitter.com/flcarneiro)
+			for Smashing Magazine's book, "Real Life Responsive Web Design" (http://goo.gl/3dGUjs). Images
+			are sourced from Unsplash (https://unsplash.com). This template is licensed under the Creative
+			Commons Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0/), meaning you're
+			free to share, transform, and build upon it, then use it for any purpose - even commercially!
+			If you use it, attribution back to me would be very much appreciated. Enjoy!
+		-->
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+		<title>Smashing Book 5: The Email!</title>
+        <style type="text/css">
+			/*////// RESET STYLES //////*/
+			p{margin:1em 0;}
+			a{word-wrap:break-word;}
+			table{border-collapse:collapse;}
+			h1, h2, h3, h4, h5, h6{display:block; margin:0; padding:0;}
+			img, a img{border:0; height:auto; outline:none; text-decoration:none;}
+			body, #bodyTable, #bodyCell{height:100%; margin:0; padding:0; width:100%;}
+
+			/*////// CLIENT-SPECIFIC STYLES //////*/
+			#outlook a{padding:0;}
+			img{-ms-interpolation-mode:bicubic;}
+			table{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+			p, a, li, td, blockquote{mso-line-height-rule:exactly;}
+			a[href^="tel"], a[href^="sms"]{color:inherit; cursor:default; text-decoration:none;}
+			p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+			.ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font{line-height:100%;}
+			a[x-apple-data-detectors]{color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important;}
+
+			/*////// STRUCTURAL STYLES //////*/
+			.flexibleContainer{max-width:640px;}
+			#leftColumn, #rightColumn{max-width:320px;}
+			#bodyContainer{max-width:410px;}
+			#sidebarContainer{max-width:180px;}
+			.headerContent{padding-top:40px; padding-bottom:40px;}
+			.bodyContent{padding-top:20px; padding-right:10px; padding-bottom:20px; padding-left:10px;}
+			.sidebarContent{padding-top:20px; padding-right:10px; padding-bottom:20px; padding-left:10px;}
+			.columnIntro{padding-top:20px; padding-right:10px; padding-bottom:20px; padding-left:10px;}
+			.columnContent{padding-right:10px; padding-bottom:20px; padding-left:10px;}
+			.imageContainer{padding-right:10px; padding-bottom:20px; padding-left:10px;}
+			.buttonContainer{padding-bottom:60px;}
+			.footerSocial{padding-top:40px; padding-right:10px; padding-bottom:40px; padding-left:10px;}
+			.footerContent{padding-top:20px; padding-right:10px; padding-bottom:20px; padding-left:10px;}
+
+			/*////// CONTENT STYLES //////*/
+			body, #bodyTable{background-color:#181818;}
+			h1{color:#FFFFFF !important; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:40px; font-weight:200; line-height:44px; margin-top:0; margin-right:0; margin-bottom:20px; margin-left:0; padding:0; text-align:center; text-shadow:0 2px 0 rgba(0, 0, 0, 0.25);}
+			h2{color:#181818 !important; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:30px; font-weight:200; line-height:34px; margin-top:0; margin-right:0; margin-bottom:20px; margin-left:0; padding:0; text-align:left;}
+			#emailHeader{background-color:#494643; background-image:url(http://i.imgur.com/TwCooBr.png); background-position:center top; background-repeat:no-repeat; background-size:cover;}
+			.headerContent p{color:#FFFFFF !important; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:18px; font-weight:200; line-height:24px; margin-top:0; margin-right:0; margin-bottom:10px; margin-left:0; text-align:center; text-shadow:0 2px 0 rgba(0, 0, 0, 0.25);}
+
+			#emailBody, #emailColumns{background-color:#FFFFFF;}
+			.bodyContent p{color:#181818 !important; font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; line-height:30px; margin-top:0; margin-right:0; margin-bottom:10px; margin-left:0;text-align:left;}
+			.bodyContent a{color:#00C5CC; font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; line-height:30px; text-align:left;}
+			.sidebarContent p{color:#8B9798 !important; font-family:Georgia, 'Times New Roman', Times, serif; font-size:30px; line-height:38px; margin:0; text-align:center;}
+			.sidebarContent small{font-size:16px;}
+
+			.columnIntro{border-top:1px solid #181818;}
+			.columnIntro p, .columnContent p{color:#181818 !important; font-family:Georgia, 'Times New Roman', Times, serif; font-size:16px; line-height:30px; margin:0; text-align:center;}
+			.emailButton{background-color:#00C5CC; border-top:15px solid #00C5CC; border-right:25px solid #00C5CC; border-bottom:15px solid #00C5CC; border-left:25px solid #00C5CC; border-radius:4px; color:#FFFFFF; display:inline-block; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; font-weight:400; line-height:18px; text-align:center; text-decoration:none;}
+
+			.footerContent{border-top:1px solid #AAAAAA;}
+			.footerContent p, .footerContent a{color:#AAAAAA !important; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; margin:0; text-align:center;}
+			.footerContent a{text-decoration:underline;}
+
+			@media screen{
+				h1, h2, .headerContent p, .emailButton, .footerContent p{font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;}
+			}
+
+			@media screen and (min-width:640px){
+				.headerContent{padding-top:80px !important; padding-bottom:80px !important;}
+				.bodyContent{padding-top:60px !important; padding-bottom:60px !important;}
+				.sidebarContent{padding-top:100px !important; padding-bottom:60px !important;}
+				.columnIntro{padding-top:40px !important; padding-bottom:40px !important;}
+				.columnContent{padding-bottom:40px !important;}
+				.footerContent{padding-top:40px !important; padding-bottom:40px !important;}
+				.footerSocial{padding-top:60px !important; padding-bottom:60px !important;}
+			}
+
+			@media screen and (max-width:640px){
+				#bodyContainer{max-width:66% !important;}
+				#sidebarContainer{max-width:33% !important;}
+				.sidebarContent{padding-top:60px !important;}
+				#leftColumn, #rightColumn{max-width:50% !important;}
+				.flexibleImage{height:auto; max-width:290px; width:100%;}
+			}
+
+			@media screen and (max-width:480px){
+				#bodyContainer, #sidebarContainer, #leftColumn, #rightColumn{max-width:100% !important;}
+				.sidebarContent{padding-top:20px !important;}
+				.sidebarContent p{font-size:22px !important; line-height:28px !important;}
+				.flexibleImage{max-width:320px;}
+			}
+        </style>
+	</head>
+	<body>
+	  <center>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+				<tr>
+					<td align="center" valign="top">
+
+
+						<table align="center" background="http://i.imgur.com/TwCooBr.png" cellpadding="0" cellspacing="0" width="100%" id="emailHeader">
+							<tr>
+								<td align="center" valign="top">
+									<!--[if gte mso 9]>
+									<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
+									<v:fill type="tile" src="http://i.imgur.com/TwCooBr.png" color="none" />
+									<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="640">
+									<tr>
+									<td align="center" valign="top">
+									<![endif]-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
+										<tr>
+											<td align="center" valign="top">
+												<table align="center" border="0" cellpadding="0" cellspacing="0" width="70%" id="headerContainer">
+													<tr>
+														<td valign="top" class="headerContent">
+															<h1>WORKSPACE ELEGANCE</h1>
+															<p>Transform your office into a sanctuary with our line of sustainably-sourced wood accessories.</p>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									</v:textbox>
+									</v:rect>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+
+
+						<table align="center" cellpadding="0" cellspacing="0" width="100%" id="emailBody">
+							<tr>
+								<td align="center" valign="top">
+									<!--[if gte mso 9]>
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="640">
+									<tr>
+									<td align="center" valign="top">
+									<![endif]-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
+										<tr>
+											<td align="center" valign="top">
+												<!--[if gte mso 9]>
+												<table align="center" border="0" cellspacing="0" cellpadding="0" dir="rtl" width="640">
+												<tr>
+												<td align="center" valign="top" width="410">
+												<![endif]-->
+												<table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyContainer">
+													<tr>
+														<td valign="top" class="bodyContent">
+															<h2>Lorem Ipsum</h2>
+															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque eleifend mauris, eu viverra dui facilisis et. Sed ligula odio, tincidunt id tortor at, efficitur ornare ipsum. Mauris orci nisi, imperdiet fringilla feugiat a, sodales in dui.</p>
+															<a href="http://www.mailchimp.com" target="_blank">Learn more about our products &rarr;</a>
+														</td>
+													</tr>
+												</table>
+												<!--[if gte mso 9]>
+												</td>
+												<td align="center" valign="top" width="180">
+												<![endif]-->
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" id="sidebarContainer">
+													<tr>
+														<td valign="top" class="sidebarContent">
+															<p>&ldquo;Lorem ipsum dolor sit amet.&rdquo;<br><small>&mdash;Lorem Ipsum</small></p>
+														</td>
+													</tr>
+												</table>
+												<!--[if gte mso 9]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+											</td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+
+
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="emailColumns">
+							<tr>
+								<td align="center" valign="top">
+									<!--[if gte mso 9]>
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="640">
+									<tr>
+									<td align="center" valign="top">
+									<![endif]-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
+										<tr>
+											<td valign="top" class="columnIntro">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque eleifend mauris, eu viverra dui facilisis et. Sed ligula odio, tincidunt id:</p>
+											</td>
+										</tr>
+										<tr>
+											<td valign="top">
+												<!--[if gte mso 9]>
+												<table border="0" cellpadding="0" cellspacing="0" width="640">
+												<tr>
+												<td align=”center” valign=”top” width="320">
+												<![endif]-->
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" id="leftColumn">
+													<tr>
+														<td align="center" valign="top" class="imageContainer">
+															<a href="http://www.mailchimp.com" target="_blank"><img src="http://i.imgur.com/JzGcwnT.png" height="180" width="290" class="flexibleImage"></a>
+														</td>
+													</tr>
+													<tr>
+														<td valign="top" class="columnContent">
+															<p>Agata Leather Desk Pad<br>$129.99</p>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" valign="top" class="buttonContainer">
+															<a href="http://www.mailchimp.com" target="_blank" class="emailButton">ADD TO CART</a>
+														</td>
+													</tr>
+												</table>
+												<!--[if gte mso 9]>
+												</td>
+												<td align=”center” valign=”top” width="320">
+												<![endif]-->
+												<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" id="rightColumn">
+													<tr>
+														<td align="center" valign="top" class="imageContainer">
+															<a href="http://www.mailchimp.com" target="_blank"><img src="http://i.imgur.com/oNKo1OY.png" height="180" width="290" class="flexibleImage"></a>
+														</td>
+													</tr>
+													<tr>
+														<td valign="top" class="columnContent">
+															<p>Carina Reclaimed Oak Table<br>$2199.99</p>
+														</td>
+													</tr>
+													<tr>
+														<td align="center" valign="top" class="buttonContainer">
+															<a href="http://www.mailchimp.com" target="_blank" class="emailButton">ADD TO CART</a>
+														</td>
+													</tr>
+												</table>
+												<!--[if gte mso 9]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+											</td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+
+
+						<table cellpadding="0" cellspacing="0" width="100%" id="emailFooter">
+							<tr>
+								<td align="center" valign="top">
+									<!--[if gte mso 9]>
+									<table align="center" border="0" cellspacing="0" cellpadding="0" width="640">
+									<tr>
+									<td align="center" valign="top">
+									<![endif]-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
+										<tr>
+											<td align="center" valign="top">
+												<table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" id="footerContainer">
+													<tr>
+														<td align="center" valign="top" class="footerSocial">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" width="180">
+																<tr>
+																	<td align="center" valign="middle" width="33%">
+																		<a href="http://www.twitter.com" target="_blank"><img src="http://i.imgur.com/NHrcYi8.png" alt="Follow us on Twitter" height="24" width="24"></a>
+																	</td>
+																	<td align="center" valign="middle" width="33%">
+																		<a href="http://www.facebook.com" target="_blank"><img src="http://i.imgur.com/G5qJv0y.png" alt="Like us on Facebook" height="24" width="24"></a>
+																	</td>
+																	<td align="center" valign="middle" width="33%">
+																		<a href="http://www.instagram.com" target="_blank"><img src="http://i.imgur.com/eZ4oYfP.png" alt="Follow us on Instagram" height="24" width="24"></a>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td valign="top" class="footerContent">
+															<p>145 AVENUE F, ATLANTA, GA 30308<br><a href="#" target="_blank">UNSUBSCRIBE</a></p>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!--[if gte mso 9]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+
+
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
